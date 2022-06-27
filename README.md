@@ -13,9 +13,11 @@
 
 > 正在现场请求样例学习。
 
+github repo: https://github.com/ronething/zhengzaitv-go.git 防止部分爬虫乱转载
+
 ### usage
 
-- 下载对应 [release](https://github.com/ronething/zhengzaitv-go/releases) 即可
+- 下载对应 [releases](https://github.com/ronething/zhengzaitv-go/releases) 即可
 
 - 如果你需要手动编译 可以考虑执行以下命令
 
