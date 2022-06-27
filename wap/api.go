@@ -116,7 +116,7 @@ func (z *Zhengzaitv) InjectUserInfo() error {
 	return nil
 }
 
-// 获取用户个人信息
+// GetUserInfo 获取用户个人信息
 func (z *Zhengzaitv) GetUserInfo() (*UserInfo, error) {
 	url := "https://adam.zhengzai.tv/adam/user/info"
 
@@ -141,6 +141,7 @@ func (z *Zhengzaitv) GetUserInfo() (*UserInfo, error) {
 	return &v.Data.UserInfo, nil
 }
 
+//GetAddrList 获取用户地址列表
 func (z *Zhengzaitv) GetAddrList() ([]GetAddrListData, error) {
 	url := "https://adam.zhengzai.tv/adam/addr/list"
 

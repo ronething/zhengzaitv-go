@@ -1,41 +1,5 @@
 package wap
 
-type OrderResult struct {
-	Code    string      `json:"code"`
-	Message interface{} `json:"message"`
-	Data    OrderData   `json:"data"`
-	Success bool        `json:"success"`
-}
-
-type PayData struct {
-	AppID       interface{} `json:"appId"`
-	NonceStr    interface{} `json:"nonceStr"`
-	TimeStamp   interface{} `json:"timeStamp"`
-	PartnerID   interface{} `json:"partnerId"`
-	PrepayID    interface{} `json:"prepayId"`
-	Sign        interface{} `json:"sign"`
-	MwebURL     interface{} `json:"mwebUrl"`
-	PaySign     interface{} `json:"paySign"`
-	SignType    interface{} `json:"signType"`
-	RedirectURL string      `json:"redirectUrl"` // 支付链接
-	OrderStr    interface{} `json:"orderStr"`
-	OrderID     string      `json:"orderId"`
-	OrderToken  string      `json:"orderToken"`
-	Package     interface{} `json:"package"`
-}
-
-type OrderData struct {
-	Code      string      `json:"code"`
-	OrderCode string      `json:"orderCode"`
-	Status    interface{} `json:"status"`
-	OrderID   string      `json:"orderId"` // 真实 orderId, payData 里面的不是
-	PayType   string      `json:"payType"`
-	ShowURL   string      `json:"showUrl"`
-	ReturnURL string      `json:"returnUrl"`
-	Price     float64     `json:"price"`
-	PayData   PayData     `json:"payData"`
-}
-
 type TicketListResult struct {
 	Code    string         `json:"code"`
 	Message interface{}    `json:"message"`
@@ -233,4 +197,3 @@ type GetAddrListData struct {
 	CreatedAt   string      `json:"createdAt"`
 	UpdatedAt   string      `json:"updatedAt"`
 }
-

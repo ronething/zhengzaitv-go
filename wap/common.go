@@ -12,11 +12,6 @@ func (z *Zhengzaitv) GetKylinHeaders() map[string]string {
 	return headers
 }
 
-func (z *Zhengzaitv) GetOrderHeaders() map[string]string {
-	headers := z.GetHeaders("order.zhengzai.tv")
-	return headers
-}
-
 func (z *Zhengzaitv) GetSmsLoginHeaders() map[string]string {
 	headers := z.GetAdamHeaders()
 	headers["version"] = "1.0.0"

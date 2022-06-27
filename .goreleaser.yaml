@@ -1,0 +1,29 @@
+# This is an example .goreleaser.yml file with some sensible defaults.
+# Make sure to check the documentation at https://goreleaser.com
+project_name: zhengzaitv
+
+env:
+  - GO111MODULE=on
+before:
+  hooks:
+    - go mod tidy
+builds:
+  - main: .
+    binary: zhengzaitv-go
+    ldflags: '-s -w -X zhengzaitv-go/cmd.version={{.Version}}
+    -X zhengzaitv-go/cmd.commit={{.ShortCommit}}
+    -X zhengzaitv-go/cmd.date={{.Date}}'
+    goos:
+      - linux
+      - windows
+      - darwin
+archives:
+  - files:
+      - README.md
+      - cli.yaml
+      - img/*
+    format_overrides:
+      - goos: windows
+        format: zip
+release:
+  prerelease: auto

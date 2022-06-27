@@ -1,6 +1,46 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [zhengzaitv-go](#zhengzaitv-go)
+- [usage](#usage)
+- [免责声明](#%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E)
+- [acknowledgement](#acknowledgement)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ### zhengzaitv-go
 
 > 正在现场请求样例学习。
+
+### usage
+
+- 下载对应 [release](https://github.com/ronething/zhengzaitv-go/releases) 即可
+
+- 手动编译
+
+```shell
+git clone https://github.com/ronething/zhengzaitv-go.git && cd zhengzaitv-go
+go mod tidy && go build
+```
+
+![cli](./img/cli.png)
+
+命令行工具提供几个示例
+
+- 查询观演人列表
+- 列出指定场次票种列表
+- 获取地址列表
+
+场次 id 通常可以在 url 中看到 `/ticket/detail?id=11525xxxxx2714`
+
+修改 `cli.yaml` 中的 cookies 为对应的 cookies 值
+
+```shell
+./zhengzaitv-go tickets -a 11525xxxxx2714 --config cli.yaml
+./zhengzaitv-go people --config cli.yaml
+./zhengzaitv-go address --config cli.yaml
+```
 
 ### 免责声明
 
