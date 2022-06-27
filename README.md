@@ -17,7 +17,7 @@
 
 - 下载对应 [release](https://github.com/ronething/zhengzaitv-go/releases) 即可
 
-- 手动编译
+- 如果你需要手动编译 可以考虑执行以下命令
 
 ```shell
 git clone https://github.com/ronething/zhengzaitv-go.git && cd zhengzaitv-go
@@ -41,6 +41,8 @@ go mod tidy && go build
 ./zhengzaitv-go people --config cli.yaml
 ./zhengzaitv-go address --config cli.yaml
 ```
+
+PS: 目前不考虑提供 `order` 命令，只是提供一点思路，仅供研究学习，祝大家好运~
 
 ### 免责声明
 

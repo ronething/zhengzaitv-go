@@ -42,7 +42,6 @@ var ticketsCmd = &cobra.Command{
 		}
 
 		table.Output(res)
-
 	},
 }
 

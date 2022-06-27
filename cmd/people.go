@@ -42,7 +42,6 @@ var peopleCmd = &cobra.Command{
 		}
 
 		table.Output(res)
-
 	},
 }
 
